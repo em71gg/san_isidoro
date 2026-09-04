@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+---
+<div class="language-selector  flex  items-center gap-1">
+    <button class="size-4  " data-lang="es">
+        <span class="fi fi-es size-2 "></span>
+    </button>
+    <button class="size-4 " data-lang="en">
+        <span class="fi fi-gb size-2"></span>
+    </button>
+    <button class="size-4 " data-lang="fr">
+        <span class="fi fi-fr size-2"></span>
+    </button>
+    <button 
+   class="size-4 " data-lang="de">
+        <span class="fi fi-de size-2"></span>
+    </button>
+</div>
+
+<script>
+    const buttons = document.querySelectorAll<HTMLButtonElement>("[data-lang]");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const lang = button.dataset.lang;
+
+            if (lang) {
+                localStorage.setItem("pref-idioma", lang);
+                window.location.href = `/${lang}/`;
+            }
+        });
+    });
+</script>
