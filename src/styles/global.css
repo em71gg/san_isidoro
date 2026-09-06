@@ -11,7 +11,7 @@
 }
 
 @theme {
-    --breakpoint-mobile: 23rem;
+    --breakpoint-mobile: 25rem;
     --breakpoint-2xs: 15rem;
     --breakpoint-xs: 30rem;
     --breakpoint-2xl: 100rem;
