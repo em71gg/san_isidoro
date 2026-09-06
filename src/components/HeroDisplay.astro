@@ -1,12 +1,11 @@
 ---
-const {heroBackground} = Astro.props
+const { heroBackground } = Astro.props;
 ---
 
-    <div
-      class="relative h-screen bg-center bg-cover"
-      style={`background-image: url('${heroBackground}');`}
-    >
-      <slot />
-    </div>
- 
-</html>
+<div
+  id="hero"
+  class="relative h-screen w-screen bg-center bg-cover overflow-x-hidden"
+  style={`background-image: url('${heroBackground}');`}
+>
+  <slot />
+</div>
