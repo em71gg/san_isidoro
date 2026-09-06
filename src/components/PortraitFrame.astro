@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+const { picture } = Astro.props;
+---
+
+<div class="rounded-4xl bg-mist-200/50 mx-auto w-fit shrink-0">
+  <div
+    class="rounded-(--card-radius) bg-white/15 p-(--card-padding)
+    outline -outline-offset-1 outline-white/50
+     [--card-padding:--spacing(1)] [--card-radius:var(--radius-4xl)]
+     shrink-0"
+  >
+    <img
+      src={picture}
+      class="rounded-[calc(var(--card-radius)-(var(--card-padding)))] h-20 border border-white/90"
+      alt="Mujer con auriculares"
+    />
+  </div>
+  
+      
+</div>
