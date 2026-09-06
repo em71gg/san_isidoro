@@ -1,0 +1,83 @@
+{
+    "codigo": "ES",
+    "saludo": "Bonjour bienvenidos a Sevilla, una ciudad ........",
+    "mensaje": "lo que queramos contarles a cerca del piso , sevilla, uso de la web etc como guia y resumen general",
+    "connect": "El canal más seguro e inmediato para nuestras comunicaciones será siempre la app de Aibnb ",
+    "flag": "fi fi-fr",
+    "home": {},
+    "instructions": {
+        "header": "Instructions",
+        "air-conditioning": {
+            "header": "Aire acondicionado.",
+            "air-loc": "El mando a distancia para el aire acondicionado se encuentra sobre la mesa bajo el telvisor.",
+            "powerair": "Para conectar el aparato que se encuentra en la planta alta, pulsar el botón de encendido/apagado apuntando al aparato.",
+            "temperatureair": "Seleccione la temperatura con los botones con las flechas hacia arriba o hacia abajo. Recuerde que está configurado en grados centígrados.",
+            "air-off": "Para apagar el aparato, pulse de nuevo el botón de encendido apuntando al aparato."
+        },
+        "heating": {
+            "header": "Calefacción.",
+            "heat-loc": "El mando a distancia para la calefacción, que se encuentra en la pared bajo la escalera se encuentra sobre la mesa bajo el televisor. Es blanco y más pequeño que el mando del aire acondicionado.",
+            "powerheat": "Para conectar el aparato, pulse el botón de encendido.",
+            "temperatureheat": "Seleccione la temperatura que desea en el display. Recuerde que está configurado en grados centígrados.",
+            "heatingoff": "Para apagar el aparato, pulse de nuevo el botón de encendido/apagado."
+        },
+        "washing-machine": {
+            "header": "Lavadora.",
+            "detergente": "Ponga el detergente en el cajetín superior o dentro del bombo si lo prefiere",
+            "close": "Asegúrese de que la puerta está bien cerrada",
+            "connect": "Para poner en marcha la lavadora, seleccione el programa que desea. Hay un programa muy eficiente de 45 minutos que lava, vaporiza y seca. Seleccione este u otro programa y pulse el botón de encendido.",
+            "start": "Espere unos segundos. La lavadora bloquea primero la puerta. Después emitirá un pitido y comenzará el lavado."
+        },
+        "stove": {},
+        "wifi": {
+            "header": "Wifi",
+            "QR": "El código QR para la wifi del apartamento se encuentra en un pequeño marco sobre la mesa de centro redonda y negra del salón.",
+            "connectcam": "Acerque su teléfono móvil con la cámara encendida al código QR.",
+            "connectQR": "Después de unos segundos, en su teléfono móvil aparecerá un enlace. Pinche el enlace y automáticamente la red wifi del apartamento estará disponible en su móvil.",
+            "connectdispositivos": "Para otros dispositivos móviles, utilice la clave para la wifi que se encuentra en la parte trasera del router que está bajo el televisor."
+        },
+        "sofa-cama": {
+            "header": "Sofá cama",
+            "img1": "public/sofa-cama1.jpg",
+            "img2": "public/sofa-cama2.jpg"
+        }
+    },
+    "rules": {
+        "header": "Normas de la casa",
+        "party": "Está prohibido hacer fiestas en el apartamento y en todas las dependencias del edificio.",
+        "smoking": "Está prohibido fumar dentro del apartamento. Si usted fuma en el patio, por favor, respete los espacios y no deje colillas en las zonas comunes.",
+        "belongings": "Está prohibido dejar enseres personales en las zonas comunes.",
+        "resting": "Este edicifio es un espacio tranquilo. Por favor, respete las horas de descanso.",
+        "check-in": "El horario para el check in en el apartamento es A PARTIR DE LAS 15h00.",
+        "check-ou": "El horario para el check out es HASTA LAS 11h00.",
+        "leaving": "Para dejar el apartamento, solo tiene que dejar las llaves sobre la mesa y cerrar la puerta de golpe desde afuera.",
+        "locking": "Por favor, no deje las llaves dentro de la cerradura. Este hecho podría acarrear un coste adicional para usted."
+    },
+    "recommendations": {
+        "header": "Recomendaciones",
+        "eating": {
+            "header": "Restaurantes",
+             "tradevo": {
+                "name":"tradevo",
+                "address":"",
+                "url":""
+            }
+        },
+        "flamenco": {
+            "header": "Flamenco"
+        }
+    },
+    "moving": {
+        "header": "Desplazamientos",
+        "transport": {
+            "header": "Tranportes",
+            "description": "La mejor información sobre transportes en la ciudad la puedes encontrar aquí",
+            "url": "https://visiterseville.fr/transports.html?gad_source=1&gclid=CjwKCAiA9ourBhAVEiwA3L5RFl4rn427hqgY3I0bNnYYcIA9RV5cjGR1yNK9mqPB8NLihCrPocDL3xoCMYAQAvD_BwE#!#3"
+        },
+        "parking": {
+            "header": "Parking",
+            "description": "El mejor lugar para parcar, Albareda",
+            "url": "https://www.parkopedia.es/aparcamiento/aparcamiento/magdalena/41001/sevilla/?arriving=202301291700&leaving=202301291900"
+        }
+    }
+}
