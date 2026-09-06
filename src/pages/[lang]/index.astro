@@ -1,0 +1,60 @@
+---
+import type { GetStaticPaths } from "astro";
+import type { TraduccionEstructura, IdiomaConfig } from "../../types";
+
+import es from "../../i18n/es.json";
+import en from "../../i18n/en.json";
+import fr from "../../i18n/fr.json";
+import de from "../../i18n/de.json";
+
+import LanguageSelector from "../../components/LanguageSelector.astro";
+import HeroHeader from "../../components/HeroHeader.astro";
+import HeroDisplay from "../../components/HeroDisplay.astro";
+import OwnerCard from "../../components/OwnerCard.astro";
+
+export const getStaticPaths = (() => {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "en" } },
+    { params: { lang: "fr" } },
+    { params: { lang: "de" } },
+  ];
+}) satisfies GetStaticPaths;
+const { lang } = Astro.params;
+
+const traducciones: Record<string, TraduccionEstructura> = { es, en, fr, de };
+const t = traducciones[lang as keyof typeof traducciones] || es;
+const backImage = "/martin-grincevschi-IJFLfaVos54-unsplash_light.jpg";
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>SanIsidoro12.14</title>
+  </head>
+  <body>
+    <HeroDisplay heroBackground={backImage}>
+      <HeroHeader
+        instructions={t.instructions.header}
+        rules={t.rules.header}
+        recommendations={t.recommendations.header}
+        moving={t.moving.header}
+        lang={lang}
+      />
+      <LanguageSelector />
+      <main class="flex justify-center sm:justify-start m-8">
+        <div class="">
+          <OwnerCard
+            welcome={t.saludo}
+            message={t.mensaje}
+            connect={t.connect}
+          />
+        </div>
+      </main>
+    </HeroDisplay>
+  </body>
+</html>
