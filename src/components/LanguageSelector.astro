@@ -1,25 +1,37 @@
 ---
 import "../styles/global.css";
 ---
-<div class="language-selector  flex  items-center gap-1">
-    <button class="size-4  " data-lang="es">
-        <span class="fi fi-es size-2 "></span>
+<!-- Añadido aria-label general para identificar la región de navegación de idioma -->
+<nav class="language-selector flex items-center gap-1 ml-8" aria-label="Selección de idioma">
+    <!-- Se añade aria-label individual a cada botón y aria-pressed para indicar si está activo -->
+    <button class="size-4 group" data-lang="es" aria-label="Cambiar a Español" aria-pressed="false">
+        <span class="fi fi-es size-2 cursor-pointer saturate-50 hover:saturate-100 group-focus:saturate-100 [[aria-pressed=true]_&]:saturate-100 hover:scale-110 duration-200 ease-in-out"></span>
     </button>
-    <button class="size-4 " data-lang="en">
-        <span class="fi fi-gb size-2"></span>
+    <button class="size-4 group" data-lang="en" aria-label="Change to English" aria-pressed="false">
+        <span class="fi fi-gb size-2 cursor-pointer saturate-50 hover:saturate-100 group-focus:saturate-100 [[aria-pressed=true]_&]:saturate-100 hover:scale-110 duration-200 ease-in-out"></span>
     </button>
-    <button class="size-4 " data-lang="fr">
-        <span class="fi fi-fr size-2"></span>
+    <button class="size-4 group" data-lang="fr" aria-label="Changer en Français" aria-pressed="false">
+        <span class="fi fi-fr size-2 cursor-pointer saturate-50 hover:saturate-100 group-focus:saturate-100 [[aria-pressed=true]_&]:saturate-100 hover:scale-110 duration-200 ease-in-out"></span>
     </button>
-    <button 
-   class="size-4 " data-lang="de">
-        <span class="fi fi-de size-2"></span>
+    <button class="size-4 group" data-lang="de" aria-label="Auf Deutsch umstellen" aria-pressed="false">
+        <span class="fi fi-de size-2 cursor-pointer saturate-50 hover:saturate-100 group-focus:saturate-100 [[aria-pressed=true]_&]:saturate-100 hover:scale-110 duration-200 ease-in-out"></span>
     </button>
-</div>
+</nav>
 
 <script>
     const buttons = document.querySelectorAll<HTMLButtonElement>("[data-lang]");
+    
+    // Obtener el idioma actual del almacenamiento (o detectar el idioma de la URL)
+    const currentLang = localStorage.getItem("pref-idioma") || window.location.pathname.split('/')[1] || "es";
 
+    // 2. Marcar el botón activo al cargar la página
+    buttons.forEach(button => {
+        if (button.dataset.lang === currentLang) {
+            button.setAttribute("aria-pressed", "true");
+        }
+    });
+
+    // Manejar el evento de click
     buttons.forEach(button => {
         button.addEventListener("click", () => {
             const lang = button.dataset.lang;
