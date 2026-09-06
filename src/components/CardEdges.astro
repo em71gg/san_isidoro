@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+const { imagen } = Astro.props;
+---
+
+<div class="rounded-4xl bg-gray-950 mx-auto flex max-w-md flex-col gap-y-18">
+  <div
+    class="rounded-(--card-radius) bg-white/15 p-(--card-padding)
+    outline -outline-offset-1 outline-white/25
+     [--card-padding:--spacing(3)] [--card-radius:var(--radius-4xl)]"
+  >
+    <img
+      src={imagen}
+      class="rounded-[calc(var(--card-radius)-(var(--card-padding)))]"
+      alt="Mujer con auriculares"
+    />
+  </div>
+  <figure class="relative isolate pt-6">
+    <svg
+      viewBox="0 0 162 128"
+      fill="none"
+      aria-hidden="true"
+      class="abosolute top-0 left-0"
+    >
+    </svg>
+    <svg
+      xmlns="http://w3.org"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="white"
+      class="w-6 h-6"
+    >
+      <!-- Cuerpo exterior de la lavadora -->
+      <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+      <!-- Panel de control/Línea superior -->
+      <line x1="4" y1="7" x2="20" y2="7"></line>
+      <!-- Botones del panel de control -->
+      <circle cx="7" cy="5" r="0.75" fill="white"></circle>
+      <circle cx="10" cy="5" r="0.75" fill="white"></circle>
+      <!-- Puerta circular (Tambor) -->
+      <circle cx="12" cy="14" r="4.5"></circle>
+      <!-- Brillo o detalle de la puerta de cristal -->
+      <path d="M12 11.5a2.5 2.5 0 0 1 2.5 2.5" stroke-linecap="round"></path>
+    </svg>
+    <blockquote class="text-xl/8 font-semibold text-white">
+      <p>
+        mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó
+        humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas
+        a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no
+        hay nada avergonzante escondido en el medio del texto. Todos los
+        generadores de Lorem Ipsum que se encuentran en Internet tienden a
+        repetir trozos predefinidos cuando sea necesario, haciendo a este el
+        único generador verdadero (v
+      </p>
+    </blockquote>
+    <figcaption class="mt-8 text-base">
+      <div class="font-semibold text-white">Pepito peres</div>
+      <div class="mt-1 text-gray-400">Pereerpep</div>
+    </figcaption>
+  </figure>
+</div>

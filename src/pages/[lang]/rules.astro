@@ -1,0 +1,41 @@
+---
+import type { GetStaticPaths } from "astro";
+import type { TraduccionEstructura, IdiomaConfig } from "../../types";
+
+import OwnerCard from "../../components/OwnerCard.astro";
+
+import es from "../../i18n/es.json";
+import en from "../../i18n/en.json";
+import fr from "../../i18n/fr.json";
+import de from "../../i18n/de.json";
+export const getStaticPaths = (() => {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "en" } },
+    { params: { lang: "fr" } },
+    { params: { lang: "de" } },
+  ];
+}) satisfies GetStaticPaths;
+const { lang } = Astro.params;
+const imagen = "/sou-jest-g9FSpTwuaWg-unsplash.jpg"
+
+const traducciones: Record<string, TraduccionEstructura> = { es, en, fr, de };
+const t = traducciones[lang as keyof typeof traducciones] || es;
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>SanIsidoro12.14</title>
+  </head>
+  <body>
+
+    <p>{t.instructions.header}</p>
+
+    <OwnerCard imagen= {imagen} />
+  </body>
+</html>
