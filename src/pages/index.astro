@@ -1,17 +1,39 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>SanIsidoro12.14</title>
+    <script is:inline>
+      // Definimos los idiomas aceptados
+      const idiomasSoportados = ["es", "en", "fr", "de"];
+
+      // ¿Eligió ya un idioma en una visita anterior?
+      const idiomaGuardado = localStorage.getItem("pref-idioma");
+
+      // Si no hay idioma guardado, Obtenemos las dos primeras letras del idioma del navegador (ej: "es-ES" -> "es")
+      const idiomaNavegador = navigator.language.split("-")[0];
+
+      let idiomaFinal = "es"; // Por defecto
+
+      if (idiomaGuardado && idiomasSoportados.includes(idiomaGuardado)) {
+        idiomaFinal = idiomaGuardado;
+      } else if (idiomasSoportados.includes(idiomaNavegador)) {
+        idiomaFinal = idiomaNavegador;
+      }
+
+      // Redirección inmediata sin parpadeos
+      window.location.replace(`/${idiomaFinal}/`);
+    </script>
+  </head>
+  <body>
+    
+
+  </body>
 </html>
