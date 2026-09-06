@@ -1,1 +1,19 @@
 @import "tailwindcss";
+@import "flag-icons/css/flag-icons.min.css";
+
+@font-face {
+    font-family: Gotham-Book;
+    src: url('/Gotham-Book.otf');
+}
+
+* {
+    font-family: "Gotham-Book", "sans-serif";
+}
+
+@theme {
+    --breakpoint-mobile: 23rem;
+    --breakpoint-2xs: 15rem;
+    --breakpoint-xs: 30rem;
+    --breakpoint-2xl: 100rem;
+    --breakpoint-3xl: 120rem;
+}
