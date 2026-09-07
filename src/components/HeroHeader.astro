@@ -36,10 +36,10 @@ const { instructions, rules, recommendations, moving, lang } = Astro.props;
   <!-- Menu lateral -->
   <div class="shrink-0 mr-8 ml-5 lg:ml-0 sm:ml-0">
     <ul class="flex space-between  text-base shrink-0">
-      <div class="hidden xs:flex rounded-full touch:p-0.5 touch:border touch:border-white/50 touch:mr-2">
+      <div class="hidden xs:flex rounded-full touch:p-0.5 touch:border touch:border-white/50 touch:active:bg-sky-200 touch:mr-2">
         <li
           class="py-1 px-3 rounded-full hover:bg-slate-300 transition-all duration-300 ease-in-out cursor-pointer
-          touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90"
+          touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90  touch:active:bg-white"
         >
           <a href=`/${lang}/instructions`>
             {instructions}
@@ -47,21 +47,21 @@ const { instructions, rules, recommendations, moving, lang } = Astro.props;
         </li>
       </div>
 
-      <div class="hidden xs:flex rounded-full touch:p-0.5 touch:border touch:border-white/50 touch:mr-2">
+      <div class="hidden xs:flex rounded-full touch:p-0.5 touch:border touch:border-white/50 touch:active:bg-sky-200 touch:mr-2">
         <li
           class="py-1 px-3 rounded-full hover:bg-slate-300 transition-all duration-300 ease-in-out cursor-pointer
-         touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90"
+         touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90  touch:active:bg-white"
         >
           {rules}
         </li>
       </div>
 
-      <div class="rounded-full touch:p-0.5 touch:border touch:border-white/50">
+      <div class="rounded-full touch:p-0.5 touch:border touch:border-white/50 touch:active:bg-sky-400/10">
         <li
           class="py-1 px-3 rounded-full hover:bg-slate-300 transition-all duration-300 ease-in-out cursor-pointer
-           touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90"
+           touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90 touch:active:bg-white" 
         >
-          Menu
+          Menú
         </li>
       </div>
     </ul>
