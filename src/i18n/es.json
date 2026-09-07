@@ -1,8 +1,8 @@
 {
     "codigo": "ES",
     "saludo": "¡Hola! Bienvenidos a Sevilla, una preciosa ciudad llena de vida y repleta de historia. ",
-    "mensaje": "Aquí podrán encontrar algunas informaciones útiles sobre el uso de la web, sobre nuestro apartamento, sobre las instrucciones de uso de los electrodomésticos y sobre la ciudad de Sevilla.",
-    "connect": "El canal más seguro para nuestras comunicaciones será siempre la app de Airbnb ",
+    "mensaje": "Aquí podrán encontrar algunas informaciones útiles sobre nuestro apartamento, sobre las normas de la casa, sobre las instrucciones de uso de los electrodomésticos y sobre la ciudad de Sevilla.",
+    "connect": "El nuestras comunicaciones serán a través la app de Airbnb ",
     "flag": "fi fi-es",
     "home": {},
     "instructions": {
