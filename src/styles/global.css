@@ -18,6 +18,9 @@
     --breakpoint-3xl: 120rem;
 }
 
+/* Variante para dispositivos táctiles */
+@custom-variant touch (@media (pointer: coarse) and (hover: none));
+
 /* en global.css o en el body */
 html, body {
   overflow-x: hidden;
