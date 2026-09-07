@@ -4,7 +4,8 @@ const { instructions, rules, recommendations, moving, lang } = Astro.props;
 
 <!--Header--><!--Div delimitador header -->
 <div
-  class="flex justify-between font-bold items-end hover:bg-slate-200 transition-all duration-300 ease-in-out py-4 touch:bg-mist-200/50"
+  class="flex justify-between font-bold items-end hover:bg-slate-400/80 transition-all duration-300 ease-in-out py-4
+   touch:bg-slate-400/80"
 >
   <!-- Div logo -->
   <div class="hidden sm:inline ml-8">
@@ -34,23 +35,31 @@ const { instructions, rules, recommendations, moving, lang } = Astro.props;
   </div>
   <!-- Menu lateral -->
   <div class="shrink-0 mr-8 ml-5 lg:ml-0 sm:ml-0">
-    <ul class="flex space-between text-base shrink-0">
-      <li
-        class="hidden xs:flex py-1 px-3 rounded-full hover:bg-slate-300 transition-all duration-300 ease-in-out cursor-pointer"
-      >
-        <a href=`/${lang}/instructions`>
-          {instructions}
-        </a>
-      </li>
-      <li
-        class="hidden xs:flex py-1 px-3 rounded-full hover:bg-slate-300 transition-all duration-300 ease-in-out cursor-pointer"
-      >
-        {rules}
-      </li>
-      <div class="rounded-full touch:p-0.5  touch:border touch:border-white/50">
+    <ul class="flex space-between  text-base shrink-0">
+      <div class="hidden xs:flex rounded-full touch:p-0.5 touch:border touch:border-white/50 touch:mr-2">
         <li
           class="py-1 px-3 rounded-full hover:bg-slate-300 transition-all duration-300 ease-in-out cursor-pointer
-           touch:bg-slate-300/65 touch:outline-offset-3 touch:outline-white/90"
+          touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90"
+        >
+          <a href=`/${lang}/instructions`>
+            {instructions}
+          </a>
+        </li>
+      </div>
+
+      <div class="hidden xs:flex rounded-full touch:p-0.5 touch:border touch:border-white/50 touch:mr-2">
+        <li
+          class="py-1 px-3 rounded-full hover:bg-slate-300 transition-all duration-300 ease-in-out cursor-pointer
+         touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90"
+        >
+          {rules}
+        </li>
+      </div>
+
+      <div class="rounded-full touch:p-0.5 touch:border touch:border-white/50">
+        <li
+          class="py-1 px-3 rounded-full hover:bg-slate-300 transition-all duration-300 ease-in-out cursor-pointer
+           touch:bg-white/80 touch:outline-offset-3 touch:outline-white/90"
         >
           Menu
         </li>
